@@ -15,6 +15,12 @@ const verticalConfig = {
   ctaColor: "#E17055",
   instagramHandle: "",
 
+  // === INDEXING GATE (Phase 5.1) ===
+  // true → robots.txt Disallow: / AND <meta name="robots" content="noindex,nofollow">
+  // on every page. Mirrors the doineedaphysician.com Phase 2c gate. Flip to false
+  // ONLY after the human disclaimer/TOS sign-off review pass (then resubmit sitemap to GSC).
+  indexingGated: true,
+
   // === ENTITY NOUNS ===
   listingNoun: "pediatrician",
   listingNounPlural: "pediatricians",
