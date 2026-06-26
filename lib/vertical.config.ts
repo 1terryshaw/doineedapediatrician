@@ -74,9 +74,9 @@ const verticalConfig = {
   // Parent physician hub + child-care-adjacent empire directories. Rendered as
   // external cards (target=_blank rel=noopener) on the homepage.
   relatedSpecialists: [
-    { label: "All Physicians", description: "The full physician directory — every medical specialty", url: "https://doineedaphysician.com" },
-    { label: "Therapist", description: "Children's and family mental health, counseling, and talk therapy", url: "https://doineedatherapist.org" },
-    { label: "Dermatologist", description: "Skin, hair, and nail conditions for all ages", url: "https://doineedadermatologist.com" },
+    { label: "Therapist", description: "Children's and family mental health, counseling, and therapy", url: "https://doineedatherapist.org" },
+    { label: "Dentist", description: "Kids' dental care, cleanings, and orthodontics", url: "https://doineedadentist.org" },
+    { label: "Optometrist", description: "Vision screening, eye exams, and kids' glasses", url: "https://doineedanoptometrist.com" },
   ],
 
   // === NATIONAL REGIONS ===
