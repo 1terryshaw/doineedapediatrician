@@ -120,6 +120,7 @@ export default async function HomePage() {
       <FadeIn as="div" delay={100}>
         <BrowseByArea
           vertical="pediatrician"
+          subtitle="Find a pediatrician in your area"
           accentTextClass="text-[#3B82F6] hover:text-[#306bca]"
         />
       </FadeIn>
