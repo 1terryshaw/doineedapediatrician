@@ -123,6 +123,9 @@ export default function Header() {
   // is `text-xl` (28px), but 14 forks render the brand `text-sm sm:text-xl`, i.e. 20px below
   // 640 — `py-2` would leave those at 36px, still under the floor. The padding is therefore
   // chosen from the MEASURED brand height so every fork lands on 44, not on the pilot's number.
+  // billing-ledger-nexttier-closeout-v1 R2: desktop-nav breakpoint re-measured LOGGED IN (the widest state — My Listing +
+  // Log Out): the bar needs 1319px, so 1280px overflowed at 1280. Now min-[1336px] (measured + 16, rounded to 4 — the
+  // doineedabookkeeper canon); below it the bar collapses like every other fleet header.
   const renderNavigation = (mobile = false) => {
     const items = mobile ? navigation.items.filter((i) => !i.primary) : navigation.items;
     return items.map((item, index) => (
@@ -135,16 +138,16 @@ export default function Header() {
 
   return (
     <header className="border-b bg-white relative z-50">
-      <div className="max-w-7xl min-[1280px]:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl min-[1336px]:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className={`${HEADER_FOCUS_RING} min-w-0 truncate max-md:py-3 text-sm sm:text-xl font-bold min-[1280px]:shrink-0 min-[1280px]:mr-4`} style={{ color: verticalConfig.primaryColor }}>
+          <Link href="/" className={`${HEADER_FOCUS_RING} min-w-0 truncate max-md:py-3 text-sm sm:text-xl font-bold min-[1336px]:shrink-0 min-[1336px]:mr-4`} style={{ color: verticalConfig.primaryColor }}>
             {WORDMARK}
           </Link>
-          <nav aria-label="Primary navigation" className="hidden min-[1280px]:flex items-center gap-6">
+          <nav aria-label="Primary navigation" className="hidden min-[1336px]:flex items-center gap-6">
             {renderNavigation()}
             <div className="border-l pl-4 ml-2 shrink-0"><ShareButtons variant="compact" title={verticalConfig.name} /></div>
           </nav>
-          <div className="min-[1280px]:hidden flex items-center gap-1 sm:gap-2 shrink-0">
+          <div className="min-[1336px]:hidden flex items-center gap-1 sm:gap-2 shrink-0">
             {primaryItem && (
               <Link
                 href={primaryItem.href}
@@ -160,7 +163,7 @@ export default function Header() {
               <button type="button" className={`${HEADER_FOCUS_RING} p-2 max-md:p-3 text-gray-600 hover:text-gray-900`} onClick={handleMobileShare} aria-label="Share"><Share2 size={20} /></button>
               {showCopied && <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs bg-gray-800 text-white px-2 py-1 rounded">Link copied</span>}
             </div>
-            <details ref={mobileNavRef} className="relative min-[1280px]:hidden">
+            <details ref={mobileNavRef} className="relative min-[1336px]:hidden">
               <summary className={`${HEADER_FOCUS_RING} flex cursor-pointer list-none items-center gap-2 rounded p-2 max-md:p-3 text-gray-600 hover:text-gray-900`} aria-label="Open primary navigation">
                 <span className="hidden sm:inline text-sm font-medium">Menu</span>
                 <svg aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
